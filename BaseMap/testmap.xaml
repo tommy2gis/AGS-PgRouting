@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="BaseMap.testmap"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:m="clr-namespace:Microsoft.Maps.MapControl;assembly=Microsoft.Maps.MapControl"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+      <m:Map CredentialsProvider="AoQJ0H_l0tx_YOsz8RdQV4xTdsVi1hwAEr3B-fhdv7LKdp-8Bbf5sT6l7OA6RcTR" Name="ctlMap" Mode="AerialWithLabels"  LogoVisibility="Collapsed"></m:Map>
+    </Grid>
+</UserControl>

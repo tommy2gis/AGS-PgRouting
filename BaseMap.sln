@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseMap", "BaseMap\BaseMap.csproj", "{4B266542-73EC-4594-A330-9E9048718283}"
+	ProjectSection(ProjectDependencies) = postProject
+		{66BE2647-5A4D-4149-8F30-C291AF176C1C} = {66BE2647-5A4D-4149-8F30-C291AF176C1C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseMap.Web", "BaseMap.Web\BaseMap.Web.csproj", "{66BE2647-5A4D-4149-8F30-C291AF176C1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TobbyBingMaps.Common", "TobbyBingMaps.Common\TobbyBingMaps.Common.csproj", "{DD23CC44-6A41-4599-A55A-8D2F11CC86D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TobbyBingMaps.MapGeometry", "TobbyBingMaps.MapGeometry\TobbyBingMaps.MapGeometry.csproj", "{6D766A3E-65BD-4F81-AA87-7AE567D3E854}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicTileLayer", "C:\Documents and Settings\Administrator\桌面\SourceCode\demo_20101215_HugeAmountPointsInClientAPI\DynamicTileLayer\DynamicTileLayer.csproj", "{B0EC9FF8-B93E-477E-8DEB-1A7B56B77462}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B266542-73EC-4594-A330-9E9048718283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B266542-73EC-4594-A330-9E9048718283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B266542-73EC-4594-A330-9E9048718283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B266542-73EC-4594-A330-9E9048718283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66BE2647-5A4D-4149-8F30-C291AF176C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66BE2647-5A4D-4149-8F30-C291AF176C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66BE2647-5A4D-4149-8F30-C291AF176C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66BE2647-5A4D-4149-8F30-C291AF176C1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD23CC44-6A41-4599-A55A-8D2F11CC86D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD23CC44-6A41-4599-A55A-8D2F11CC86D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD23CC44-6A41-4599-A55A-8D2F11CC86D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD23CC44-6A41-4599-A55A-8D2F11CC86D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D766A3E-65BD-4F81-AA87-7AE567D3E854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D766A3E-65BD-4F81-AA87-7AE567D3E854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D766A3E-65BD-4F81-AA87-7AE567D3E854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D766A3E-65BD-4F81-AA87-7AE567D3E854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0EC9FF8-B93E-477E-8DEB-1A7B56B77462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0EC9FF8-B93E-477E-8DEB-1A7B56B77462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0EC9FF8-B93E-477E-8DEB-1A7B56B77462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0EC9FF8-B93E-477E-8DEB-1A7B56B77462}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

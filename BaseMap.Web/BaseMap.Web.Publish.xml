@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Documents and Settings\Administrator\桌面\silverlight" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/Mono.Security.dll" publishTime="07/07/2007 00:09:48" />
+    <file relUrl="bin/Npgsql.dll" publishTime="03/24/2011 20:45:14" />
+    <file relUrl="BaseMapTestPage.aspx" publishTime="09/30/2011 17:05:05" />
+    <file relUrl="bin/BaseMap.Web.dll" publishTime="10/08/2011 16:33:23" />
+    <file relUrl="Web.config" publishTime="10/08/2011 17:13:03" />
+    <file relUrl="Silverlight.js" publishTime="03/28/2011 15:45:54" />
+    <file relUrl="ClientBin/BaseMap.xap" publishTime="10/08/2011 17:07:20" />
+    <file relUrl="RoutingWebService.asmx" publishTime="09/13/2011 16:22:24" />
+    <file relUrl="BaseMapTestPage.html" publishTime="03/28/2011 15:45:54" />
+    <file relUrl="bin/BaseMap.Web.pdb" publishTime="10/08/2011 16:33:23" />
+  </publishProfile>
+</publishData>

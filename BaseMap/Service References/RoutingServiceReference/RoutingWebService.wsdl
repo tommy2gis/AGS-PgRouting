@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRouting">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="layer" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="begin" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="last" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoutingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoutingResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBeginRoad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lg" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="lt" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="ditMini" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBeginRoadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBeginRoadResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastRoad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lg" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="lt" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="ditMini" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastRoadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastRoadResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBarrierRoad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lg" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="lt" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="ditMini" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBarrierRoadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBarrierRoadResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePassable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="source" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="target" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="passable" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePassableResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="QueryRealRoads">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="layer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="leve" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryRealRoadsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryRealRoadsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateLength">
+        <s:complexType />
+      </s:element>
+      <s:element name="updateLengthResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="updatePassableToT">
+        <s:complexType />
+      </s:element>
+      <s:element name="updatePassableToTResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoutingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRouting" />
+  </wsdl:message>
+  <wsdl:message name="GetRoutingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoutingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBeginRoadSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBeginRoad" />
+  </wsdl:message>
+  <wsdl:message name="GetBeginRoadSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBeginRoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastRoadSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastRoad" />
+  </wsdl:message>
+  <wsdl:message name="GetLastRoadSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastRoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBarrierRoadSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBarrierRoad" />
+  </wsdl:message>
+  <wsdl:message name="GetBarrierRoadSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBarrierRoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePassableSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePassable" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePassableSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePassableResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryRealRoadsSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryRealRoads" />
+  </wsdl:message>
+  <wsdl:message name="QueryRealRoadsSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryRealRoadsResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateLengthSoapIn">
+    <wsdl:part name="parameters" element="tns:updateLength" />
+  </wsdl:message>
+  <wsdl:message name="updateLengthSoapOut">
+    <wsdl:part name="parameters" element="tns:updateLengthResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePassableToTSoapIn">
+    <wsdl:part name="parameters" element="tns:updatePassableToT" />
+  </wsdl:message>
+  <wsdl:message name="updatePassableToTSoapOut">
+    <wsdl:part name="parameters" element="tns:updatePassableToTResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RoutingWebServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRouting">
+      <wsdl:input message="tns:GetRoutingSoapIn" />
+      <wsdl:output message="tns:GetRoutingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBeginRoad">
+      <wsdl:input message="tns:GetBeginRoadSoapIn" />
+      <wsdl:output message="tns:GetBeginRoadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastRoad">
+      <wsdl:input message="tns:GetLastRoadSoapIn" />
+      <wsdl:output message="tns:GetLastRoadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBarrierRoad">
+      <wsdl:input message="tns:GetBarrierRoadSoapIn" />
+      <wsdl:output message="tns:GetBarrierRoadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassable">
+      <wsdl:input message="tns:UpdatePassableSoapIn" />
+      <wsdl:output message="tns:UpdatePassableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRealRoads">
+      <wsdl:input message="tns:QueryRealRoadsSoapIn" />
+      <wsdl:output message="tns:QueryRealRoadsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateLength">
+      <wsdl:input message="tns:updateLengthSoapIn" />
+      <wsdl:output message="tns:updateLengthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePassableToT">
+      <wsdl:input message="tns:updatePassableToTSoapIn" />
+      <wsdl:output message="tns:updatePassableToTSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RoutingWebServiceSoap" type="tns:RoutingWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRouting">
+      <soap:operation soapAction="http://tempuri.org/GetRouting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeginRoad">
+      <soap:operation soapAction="http://tempuri.org/GetBeginRoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastRoad">
+      <soap:operation soapAction="http://tempuri.org/GetLastRoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBarrierRoad">
+      <soap:operation soapAction="http://tempuri.org/GetBarrierRoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassable">
+      <soap:operation soapAction="http://tempuri.org/UpdatePassable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRealRoads">
+      <soap:operation soapAction="http://tempuri.org/QueryRealRoads" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLength">
+      <soap:operation soapAction="http://tempuri.org/updateLength" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePassableToT">
+      <soap:operation soapAction="http://tempuri.org/updatePassableToT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RoutingWebServiceSoap12" type="tns:RoutingWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRouting">
+      <soap12:operation soapAction="http://tempuri.org/GetRouting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeginRoad">
+      <soap12:operation soapAction="http://tempuri.org/GetBeginRoad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastRoad">
+      <soap12:operation soapAction="http://tempuri.org/GetLastRoad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBarrierRoad">
+      <soap12:operation soapAction="http://tempuri.org/GetBarrierRoad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassable">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePassable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRealRoads">
+      <soap12:operation soapAction="http://tempuri.org/QueryRealRoads" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLength">
+      <soap12:operation soapAction="http://tempuri.org/updateLength" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePassableToT">
+      <soap12:operation soapAction="http://tempuri.org/updatePassableToT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RoutingWebService">
+    <wsdl:port name="RoutingWebServiceSoap" binding="tns:RoutingWebServiceSoap">
+      <soap:address location="http://localhost:2478/RoutingWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RoutingWebServiceSoap12" binding="tns:RoutingWebServiceSoap12">
+      <soap12:address location="http://localhost:2478/RoutingWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

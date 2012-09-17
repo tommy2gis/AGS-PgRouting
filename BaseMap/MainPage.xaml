@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="BaseMap.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:m="clr-namespace:Microsoft.Maps.MapControl;assembly=Microsoft.Maps.MapControl"
+     xmlns:local="clr-namespace:BaseMap"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+   
+
+    <UserControl.Resources>
+        <Storyboard x:Name="timer" Completed="timer_Completed"/>
+        <Storyboard x:Name="Dtimer" Completed="Dtimer_Completed"/>
+        <Storyboard x:Name="Ltimer" Completed="Ltimer_Completed"/>
+    </UserControl.Resources>
+
+
+    <Grid>
+        <m:Map CredentialsProvider="AoQJ0H_l0tx_YOsz8RdQV4xTdsVi1hwAEr3B-fhdv7LKdp-8Bbf5sT6l7OA6RcTR" Name="ctlMap" Mode="AerialWithLabels" MouseClick="ctlMap_MouseClick" MouseMove="ctlMap_MouseMove" LogoVisibility="Collapsed" ></m:Map>
+    <Border Background="#FF000000" CornerRadius="8,8,8,8" Padding="0,8,0,8" Opacity="0.68" MinWidth="190" MinHeight="30"
+        HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,5,30">
+        <TextBlock x:Name="Coords" HorizontalAlignment="Center" TextWrapping="Wrap" Foreground="White"/>
+    </Border>
+        <Button Content="起点" Height="23" HorizontalAlignment="Right" Click="btnbegin_Click" Name="btnbegin" VerticalAlignment="Top" Width="75" />
+        <Button Content="终点" Height="23" HorizontalAlignment="Right" Click="btnlast_Click" Name="btnlast" VerticalAlignment="Top" Margin="0,25,0,0" Width="75" />
+        <Button Content="障碍" Height="23" HorizontalAlignment="Right" Click="btnbarrier_Click"  Name="btnbarrier" VerticalAlignment="Top" Margin="0,50,0,0" Width="75" />
+        <Button Content="计算" Height="23" HorizontalAlignment="Right" Click="calculate_Click"  Name="calculate" VerticalAlignment="Top" Margin="0,75,0,0" Width="75" />
+        <Button Content="清除" Height="23" HorizontalAlignment="Right" Click="btnClear_Click"  Name="btnClear" VerticalAlignment="Top" Margin="0,100,0,0" Width="75" />
+        <Button Content="刷新路况" Height="23" HorizontalAlignment="Right" Click="btnReflesh_Click"  Name="btnReflesh" VerticalAlignment="Top" Margin="0,125,0,0" Width="75" />
+        <CheckBox Content="切换小车" Height="16" HorizontalAlignment="Right"  Name="cbxCar"  VerticalAlignment="Top" Margin="0,150,0,0" Width="75" />
+        <local:LoadingSpin x:Name="RouteLoadingPanel" VerticalAlignment="Stretch"
+                                            HorizontalAlignment="Stretch"  Visibility="Collapsed"/>
+        
+    </Grid>
+</UserControl>

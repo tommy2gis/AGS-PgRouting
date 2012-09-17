@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="RoutingWebServiceSoap" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:2478/RoutingWebService.asmx"
+                binding="basicHttpBinding" bindingConfiguration="RoutingWebServiceSoap"
+                contract="RoutingServiceReference.RoutingWebServiceSoap" name="RoutingWebServiceSoap" />
+        </client>
+    </system.serviceModel>
+</configuration>
